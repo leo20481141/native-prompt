@@ -27,7 +27,7 @@ prompt (title, body, options)
 >The title you want to display at the top of the window
 ### `body:string`
 >Any helpful text to go inside the message box
-### `options: { defaultText?: string; mask?: boolean }`
+### `options: { defaultText?: string; mask?: boolean; okButtonLabel?: string; cancelButtonLabel?: string }`
 >Any (optional) extra options (see below)
 
 ## Options
@@ -35,6 +35,10 @@ prompt (title, body, options)
 >The text you want to already be in the input box beforehand
 ### `mask?: boolean`
 >Whether you want the box to have a hidden input
+### `okButtonLabel?: string`
+>The label for the "ok" button, it only works on windows and linux and by default in linux it is not set and in windows it is set as "Ok"
+### `cancelButtonLabel?: string`
+>The label for the "cancel" button, it only works on windows and linux and by default in linux it is not set and in windows it is set as "Cancel"
 
 ## Examples
 ### Importing
@@ -77,6 +81,18 @@ prompt("This is a title.", "What would you really like to see next?", { defaultT
         // Log the user in
     } else {
         // The user's entered their username or password incorrect
+    }
+})()
+```
+
+### Ok and Cancel buttons modified example
+```js
+(async () => {
+    const text = await prompt("Your Name", "Write your name.", { okButtonLabel: "Submit", cancelButtonLabel: "Abort" });
+    if (text) {
+        // Do something with the input
+    } else {
+        // The user either clicked cancel or left the space blank
     }
 })()
 ```

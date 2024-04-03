@@ -40,7 +40,6 @@ $textbox = New-Object System.Windows.Forms.TextBox;
 $textbox.Text = $args[2];
 $textbox.Location = New-Object System.Drawing.Point(15, 30);
 $textbox.Size = New-Object System.Drawing.Size(255, 20);
-$textbox.PasswordChar = "*";
 $textbox.BorderStyle = [System.Windows.Forms.BorderStyle]::FixedSingle;
 $form.Controls.Add($textbox);
 

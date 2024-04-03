@@ -16,5 +16,8 @@
     "url": "https://github.com/ssight/native-prompt/issues"
   },
   "homepage": "https://github.com/ssight/native-prompt#readme",
-  "keywords": ["nodejs", "electron", "gui"]
+  "keywords": ["nodejs", "electron", "gui"],
+  "devDependencies": {
+    "@types/node": "^20.12.2"
+  }
 }

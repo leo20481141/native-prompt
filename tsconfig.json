@@ -9,7 +9,10 @@
     "strict": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node"],
+    "declaration": true,
+    "emitDeclarationOnly": false
   },
   "compileOnSave": true
 }
