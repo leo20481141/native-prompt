@@ -18,7 +18,7 @@ export = async function (title: string, body: string, options: Options = {}): Pr
     switch (platform) {
         case 'win32': {
             if (options.mask) return await win32.displayMask(title, body, defaultText, okButtonLabel, cancelButtonLabel);
-            else return await win32.displayBox(title, body, defaultText);
+            else return await win32.displayBox(title, body, defaultText, okButtonLabel, cancelButtonLabel);
         }
         case 'linux': return await linux(title, body, options.mask, defaultText, okButtonLabel, cancelButtonLabel);
         case 'darwin': return await darwin(title, body, options.mask, defaultText);

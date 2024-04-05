@@ -4,7 +4,7 @@
   "description": "Create native prompts with Node.js and Electron",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "(rm tsconfig.tsbuildinfo && rm -R dist && tsc && node test) || (del .\\tsconfig.tsbuildinfo && rd /s /q .\\dist && tsc && node test.js) || (tsc && node test.js)"
   },
   "repository": {
     "type": "git",
